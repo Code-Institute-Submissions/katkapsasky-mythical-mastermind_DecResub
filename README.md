@@ -23,7 +23,15 @@ As a user,
 
 | Page | Responsiveness | Wireframe |
 | --- | --- | --- |
-| Home Page | ![screensize](responsiveness link) | ![screensize](wireframe link) |
+| Home Page | ![screensize](responsiveness link) | ![desktop](documentation/wireframes/desktop-homepage-wireframe.png) |
+| Home Page | ![screensize](responsiveness link) | ![tablet](documentation/wireframes/tablet-homepage-wireframe.png) |
+| Home Page | ![screensize](responsiveness link) | ![mobile](documentation/wireframes/mobile-homepage-wireframe.png) |
+| Play Page | ![screensize](responsiveness link) | ![desktop](documentation/wireframes/desktop-playpage-wireframe.png) |
+| Play Page | ![screensize](responsiveness link) | ![tablet](documentation/wireframes/tablet-playpage-wireframe.png) |
+| Play Page | ![screensize](responsiveness link) | ![mobile](documentation/wireframes/mobile-playpage-wireframe.png) |
+| High Scores Page | ![screensize](responsiveness link) | ![desktop](documentation/wireframes/desktop-scorespage-wireframe.png) |
+| High Scores Page | ![screensize](responsiveness link) | ![tablet](documentation/wireframes/tablet-scorespage-wireframe.png) |
+| High Scores Page | ![screensize](responsiveness link) | ![mobile](documentation/wireframes/mobile-scorespage-wireframe.png) |
 
 ---
 
