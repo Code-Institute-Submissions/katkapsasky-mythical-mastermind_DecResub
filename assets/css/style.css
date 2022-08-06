@@ -5,6 +5,21 @@ body {
 
 header {
     font-family: 'Gideon Roman', cursive;
+    background-color: #296EB4;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+header li {
+    list-style: none;
+}
+
+#logo {
+    font-size: 200%;
+    font-weight: bolder;
 }
 
 button {
