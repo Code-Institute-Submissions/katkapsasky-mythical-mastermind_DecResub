@@ -7,11 +7,8 @@ let questionElement = document.getElementById('questions');
 let answerButtonsElement = document.getElementById('answer-options');
 let optionButtons = answerButtonsElement.querySelectorAll("button");
 let progressText = document.getElementById('progress-text');
-let scoreText = document.getElementById('score');
 let progressBarFull = document.getElementById('progress-bar-full');
-let score = 0;
 let questionCounter = 0;
-let scorePoints = 10;
 let maxQuestions = 10;
 
 let shuffledQuestions, currentQuestionIndex
@@ -24,9 +21,9 @@ nextButton.addEventListener('click', ()=> {
 });
 
 // Increments player's total score
-incrementScore = num => {
-    score +=num
-    scoreText.innerText = score
+function incrementScore() {
+    let oldScore = parseInt(document.getElementById('score').innerText);
+    document.getElementById('score').innerText = ++oldScore;
 }
 
 /**
@@ -35,7 +32,6 @@ incrementScore = num => {
  */
 function startGame() {
     questionCounter = 0
-    score = 0
     startButton.style.visibility = 'hidden'
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
@@ -107,6 +103,7 @@ function setStatusClass(element, correct) {
     clearStatusClass(element)
     if (correct) {
         element.classList.add('correct')
+        incrementScore();
     } else {
         element.classList.add('wrong')
     }
