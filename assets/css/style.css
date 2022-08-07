@@ -1,6 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
 body {
     background-color: white;
     font-family: 'Luxurious Roman', cursive;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header {
@@ -13,8 +25,18 @@ header a {
     color: white;
 }
 
+header a:hover {
+    color: #FDB833;
+}
+
+header ul {
+    display: flex;
+}
+
 header li {
     list-style: none;
+    display: flex;
+    margin-right: 30px;
 }
 
 #logo {

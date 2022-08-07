@@ -8,6 +8,7 @@ let answerButtonsElement = document.getElementById('answer-options');
 let optionButtons = answerButtonsElement.querySelectorAll("button");
 let progressText = document.getElementById('progress-text');
 let progressBarFull = document.getElementById('progress-bar-full');
+let score = document.getElementById('score');
 let questionCounter = 0;
 let maxQuestions = 10;
 
@@ -19,12 +20,6 @@ nextButton.addEventListener('click', ()=> {
     currentQuestionIndex++;
     setNextQuestion();
 });
-
-// Increments player's total score
-function incrementScore() {
-    let oldScore = parseInt(document.getElementById('score').innerText);
-    document.getElementById('score').innerText = ++oldScore;
-}
 
 /**
  * Shuffles questions
@@ -83,7 +78,6 @@ function showQuestion(question) {
     });
 }
 
-
 function selectAnswer(e) {
     let selectedButton = e.target
     let correct = selectedButton.dataset.correct
@@ -107,6 +101,13 @@ function setStatusClass(element, correct) {
     } else {
         element.classList.add('wrong')
     }
+}
+
+// Increments player's total score
+function incrementScore() {
+    let oldScore = parseInt(document.getElementById('score').innerText);
+    oldScore = 0;
+    document.getElementById('score').innerText = ++oldScore;
 }
 
 function clearStatusClass(element) {
