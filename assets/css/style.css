@@ -47,3 +47,10 @@ header li {
 button {
     font-family: 'Luxurious Roman', cursive;
 }
+
+footer {
+    font-family: 'Luxurious Roman', cursive;
+    background-color: #296EB4;
+    color: white;
+    position: sticky;
+}

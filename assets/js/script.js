@@ -1,53 +1,38 @@
-// Defines variables for the quiz on play.html
-let startButton = document.getElementById('start-button');
-let nextButton = document.getElementById('next-button');
-let quizQuestions = document.getElementById('quiz-questions');
-quizQuestions.style.display = 'none'
-let questionElement = document.getElementById('questions');
-let answerButtonsElement = document.getElementById('answer-options');
-let optionButtons = answerButtonsElement.querySelectorAll("button");
+let startButton = document.getElementById('start')
+let quiz = document.getElementById('quiz')
+quiz.style.display = 'none'
+let answerOptions = document.querySelectorAll('.answer')
+let questionEl = document.getElementById('question')
+let a_text = document.getElementById('a_text')
+let b_text = document.getElementById('b_text')
+let c_text = document.getElementById('c_text')
+let d_text = document.getElementById('d_text')
+
 let progressText = document.getElementById('progress-text');
 let progressBarFull = document.getElementById('progress-bar-full');
-let score = document.getElementById('score');
 let questionCounter = 0;
 let maxQuestions = 10;
 
-let shuffledQuestions, currentQuestionIndex
+let submitBtn = document.getElementById('submit')
 
-// Adds Event Listeners for the Start and Next Question buttons
-startButton.addEventListener('click', startGame)
-nextButton.addEventListener('click', ()=> {
-    currentQuestionIndex++;
-    setNextQuestion();
-});
+let currentQuiz = 0
+let score = 0
 
-/**
- * Shuffles questions
- * Hides Start button once the player clicks on it
- */
-function startGame() {
-    questionCounter = 0
-    startButton.style.visibility = 'hidden'
-    shuffledQuestions = questions.sort(() => Math.random() - .5)
-    currentQuestionIndex = 0
-    quizQuestions.style.display = 'block'
-    setNextQuestion()
-}
+startButton.addEventListener('click', loadQuiz)
 
-/**
- * Sets next question if there are any remaining
- * Stores player's score in local storage
- * Logs player progress
- */
-function setNextQuestion() {
-    resetState()
-    showQuestion(shuffledQuestions[currentQuestionIndex])
+function loadQuiz() {
+    
+    quiz.style.display = 'block'
+    startButton.style.display = 'none'
+    deselectAnswers()
 
-    if(shuffledQuestions.length === 0 || questionCounter > maxQuestions) {
-        localStorage.setItem('mostRecentScore', score)
+    let currentQuizData = questions[currentQuiz]
 
-        return window.location.assign('/end.html')
-    } 
+    questionEl.innerText = currentQuizData.question
+    a_text.innerText = currentQuizData.a
+    b_text.innerText = currentQuizData.b
+    c_text.innerText = currentQuizData.c
+    d_text.innerText = currentQuizData.d
 
     questionCounter++ 
     progressText.innerText = `Question ${questionCounter} of ${maxQuestions}`
@@ -55,63 +40,37 @@ function setNextQuestion() {
     `
 }
 
-// Hides next button once questions run out
-function resetState() {
-    nextButton.style.visibility = 'hidden'
-    while (answerButtonsElement.firstChild) {
-        answerButtonsElement.removeChild(answerButtonsElement.firstChild)
-    }
+function deselectAnswers() {
+    answerOptions.forEach(answerOption => answerOption.checked = false)
 }
 
-function showQuestion(question) {
-    questionElement.innerText = question.question
-    question.answers.forEach(function(answer, outerIndex) { // loop over question answers from array
-        optionButtons.forEach(function(button, innerIndex) { // loop over html buttons
-            if (outerIndex === innerIndex) {
-                // console.log(button, answer);
-                button.innerText = answer.text;
-                button.dataset.correct = answer.correct;
-            }
-            button.addEventListener('click', selectAnswer)
-            answerButtonsElement.appendChild(button)
-        });
-    });
-}
-
-function selectAnswer(e) {
-    let selectedButton = e.target
-    let correct = selectedButton.dataset.correct
-    setStatusClass(document.body, correct)
-    Array.from(answerButtonsElement.children).forEach(button => {
-        setStatusClass(button, button.dataset.correct)
+function getSelected() {
+    let answer
+    answerOptions.forEach(answerOption => {
+        if(answerOption.checked) {
+            answer = answerOption.id
+        }
     })
-    if (shuffledQuestions.length > currentQuestionIndex+1) {
-        nextButton.style.visibility = 'visible'
-    }   else {
-        startButton.innerText = 'Restart'
-        startButton.style.visibility = 'visible'
+    return answer
+}
+
+submitBtn.addEventListener('click', () => {
+    let answer = getSelected()
+    if(answer) {
+       if(answer === questions[currentQuiz].correct) {
+           score++
+       }
+
+       currentQuiz++
+
+       if(currentQuiz < questions.length) {
+           loadQuiz()
+       } else {
+           quiz.innerHTML = `
+           <h2>You answered ${score}/${questions.length} questions correctly</h2>
+
+           <button onclick="location.reload()">Reload</button>
+           `
+       }
     }
-}
-
-function setStatusClass(element, correct) {
-    clearStatusClass(element)
-    if (correct) {
-        element.classList.add('correct')
-        incrementScore();
-    } else {
-        element.classList.add('wrong')
-    }
-}
-
-// Increments player's total score
-function incrementScore() {
-    let oldScore = parseInt(document.getElementById('score').innerText);
-    oldScore = 0;
-    document.getElementById('score').innerText = ++oldScore;
-}
-
-function clearStatusClass(element) {
-    element.classList.remove('correct')
-    element.classList.remove('wrong')
-}
-
+})

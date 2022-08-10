@@ -1,29 +1,34 @@
 const questions = [
     {
-        question: 'Who was the chief god in greek mythology?',
-        answers: [
-            {text: 'Zeus', correct: true},
-            {text: 'Apollo', correct: false},
-            {text: 'Poseidon', correct: false},
-            {text: 'Hades', correct: false},
-        ]
+        question: "Who was the chief god in greek mythology?",
+        a: "Apollo",
+        b: "Poseidon",
+        c: "Hades",
+        d: "Zeus",
+        correct: "d",
     },
     {
-        question: 'question 2',
-        answers: [
-            {text: 'aaaa', correct: false},
-            {text: 'bbbb', correct: false},
-            {text: 'cccc', correct: true},
-            {text: 'dddd', correct: false},
-        ]
+        question: "What does CSS stand for?",
+        a: "Central Style Sheets",
+        b: "Cascading Style Sheets",
+        c: "Cascading Simple Sheets",
+        d: "Cars SUVs Sailboats",
+        correct: "b",
     },
     {
-        question: 'question 3',
-        answers: [
-            {text: 'aaaa', correct: false},
-            {text: 'bbbb', correct: false},
-            {text: 'cccc', correct: false},
-            {text: 'dddd', correct: true},
-        ]
-    }
+        question: "What does HTML stand for?",
+        a: "Hypertext Markup Language",
+        b: "Hypertext Markdown Language",
+        c: "Hyperloop Machine Language",
+        d: "Helicopters Terminals Motorboats Lamborginis",
+        correct: "a",
+    },
+    {
+        question: "What year was JavaScript launched?",
+        a: "1996",
+        b: "1995",
+        c: "1994",
+        d: "none of the above",
+        correct: "b",
+    },
 ];
