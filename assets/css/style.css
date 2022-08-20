@@ -9,40 +9,54 @@ body {
     font-family: 'Luxurious Roman', cursive;
 }
 
-#navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header {
-    font-family: 'Gideon Roman', cursive;
-    background-color: #296EB4;
-}
-
-header a {
-    text-decoration: none;
-    color: white;
-}
-
-header a:hover {
-    color: #FDB833;
-}
-
-header ul {
-    display: flex;
-}
-
-header li {
-    list-style: none;
-    display: flex;
-    margin-right: 30px;
-}
-
+/* For smallers screen sizes from 600px wide and down */
+/* Logo styling */
 #logo {
-    font-size: 200%;
+    font-size: 150%;
     font-weight: bolder;
 }
+
+/* Style the navigation menu */
+.topnav {
+    overflow: hidden;
+    font-family: 'Gideon Roman', cursive;
+    background-color: #1789FC;
+    position: relative;
+  }
+  
+  /* Hide the links inside the navigation menu (except for logo) */
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  /* Style navigation menu links */
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    background: #296EB4;
+    display: block;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+  }
+ 
+  /* Add color when links in header are hovered over */
+  header a:hover {
+    color: #FDC149;
+}
+  
+  /* Style the active link (or home/logo) */
+  .active {
+    background-color: #296EB4;
+    color: white;
+  }
 
 button {
     font-family: 'Luxurious Roman', cursive;

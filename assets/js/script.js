@@ -1,3 +1,13 @@
+// toggles hamburger menu display when clicked
+function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+
 let startButton = document.getElementById('start')
 let quiz = document.getElementById('quiz')
 quiz.style.display = 'none'

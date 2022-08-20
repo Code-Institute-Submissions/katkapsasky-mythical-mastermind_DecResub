@@ -12,19 +12,24 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Mythical Mastermind</title>
 </head>
+
 <body>
 
-    <header>
-        <nav id="navbar">
-        <a id="logo" href="index.html">Mythical Mastermind</a>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="play.html">Play</a></li>
-        </ul>
-    </nav>
+    <header class="topnav">
+        <a href="index.html" id="logo" class="active">Mythical Mastermind</a>
+        
+        <!-- Navigation links (hidden by default) -->
+        <nav id="myLinks">
+            <a href="index.html">Home</a>
+            <a href="play.html">Play</a>
+        </nav>
+
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars icon-4x"></i>
+        </a>
     </header>
 
-    <body>
         <button id="start">Start</button>
 
         <div class="quiz-container" id="quiz">
@@ -71,70 +76,3 @@
         <script src="assets/js/questions.js"></script>
         <script src="assets/js/script.js"></script>
     </body>
-
-<!--
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="History quiz about greek mythology">
-    <meta name="keywords" content="quiz, history, greek, greece, mythology">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Luxurious+Roman&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Mythical Mastermind</title>
-</head>
-<body>
-
-    <header>
-        <nav id="navbar">
-        <a id="logo" href="index.html">Mythical Mastermind</a>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="play.html">Play</a></li>
-        </ul>
-    </nav>
-    </header>
-
-    <section id="progress-score-container">
-        <div id="progress-container">
-            <p id="progress-text">Question</p>
-            <div id="progress-bar">
-            <div id="progress-bar-full"></div>
-        </div>
-    </div>
-    <div id="score-container">
-        <p id="score-text">Score</p>
-        <h2 id="score">0</h2>
-    </div>
-    </section>
-
-    <section class="quiz-container">
-        <div id="quiz-questions">
-            <h2 id="questions">Question</h2>
-            <div id="answer-options">
-                <button class="button">Answer 1</button>
-                <button class="button">Answer 2</button>
-                <button class="button">Answer 3</button>
-                <button class="button">Answer 4</button>
-            </div>
-        </div>
-
-        <div class="controls">
-            <button id="start-button" class="start-button button">Start</button>
-            <button id="next-button" class="next-button button">Next Question</button>
-        </div>
-    </section>
-
-    <footer>
-        <p>Developed by Kat Kapsasky for Code Institute Project 2</p>
-    </footer>
-    
-    <script src="assets/js/questions.js"></script>
-    <script src="assets/js/script.js"></script>
-</body>
-</html>
--->
