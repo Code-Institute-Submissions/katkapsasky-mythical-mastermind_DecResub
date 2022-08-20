@@ -1,12 +1,12 @@
 * {
-    margin: 0;
-    padding: 0;
-    border: none;
+    box-sizing: border-box;
 }
 
 body {
     background-color: white;
     font-family: 'Luxurious Roman', cursive;
+    overflow: hidden;
+    margin: 0;
 }
 
 /* For smallers screen sizes from 600px wide and down */
@@ -55,16 +55,45 @@ body {
   /* Style the active link (or home/logo) */
   .active {
     background-color: #296EB4;
-    color: white;
+    color: #fff;
   }
 
+.welcome {
+    display: block;
+    background-color: #fff;
+    color: #296EB4;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px rgba(41,110,180);
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+}
+
 button {
-    font-family: 'Luxurious Roman', cursive;
+    font-family: inherit;
+    display: block;
+    background-color: #fff;
+    color: #fff;
+    border-radius: 25px;
+    border: #296EB4;
+    box-shadow: 0 0 10px 2px rgba(41,110,180);
+    width: 30%;
+    margin: 0 auto;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+button a {
+    text-decoration: none;
 }
 
 footer {
-    font-family: 'Luxurious Roman', cursive;
     background-color: #296EB4;
     color: white;
-    position: sticky;
+    font-size: smaller;
+    height: 10vh;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
 }
+
