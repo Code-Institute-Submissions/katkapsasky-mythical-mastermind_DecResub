@@ -1,99 +1,145 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: white;
-    font-family: 'Luxurious Roman', cursive;
-    overflow: hidden;
-    margin: 0;
+  background-color: #fff;
+  font-family: 'Luxurious Roman', cursive;
+  overflow: hidden;
+  margin: 0;
+}
+
+h1 {
+  padding-top: 5%;
 }
 
 /* For smallers screen sizes from 600px wide and down */
 /* Logo styling */
 #logo {
-    font-size: 150%;
-    font-weight: bolder;
+  font-size: 150%;
+  font-weight: bolder;
 }
 
 /* Style the navigation menu */
 .topnav {
-    overflow: hidden;
-    font-family: 'Gideon Roman', cursive;
-    background-color: #1789FC;
-    position: relative;
-  }
-  
-  /* Hide the links inside the navigation menu (except for logo) */
-  .topnav #myLinks {
-    display: none;
-  }
-  
-  /* Style navigation menu links */
-  .topnav a {
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
-  }
-  
-  /* Style the hamburger menu */
-  .topnav a.icon {
-    background: #296EB4;
-    display: block;
-    position: absolute;
-    right: 5px;
-    top: 5px;
-  }
- 
-  /* Add color when links in header are hovered over */
-  header a:hover {
-    color: #FDC149;
+  overflow: hidden;
+  font-family: 'Gideon Roman', cursive;
+  background-color: #1789FC;
+  position: relative;
 }
-  
-  /* Style the active link (or home/logo) */
-  .active {
-    background-color: #296EB4;
-    color: #fff;
-  }
 
+/* Hide the links inside the navigation menu (except for logo) */
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: #fff;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: #296EB4;
+  color: #fff;
+  display: block;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+/* Add color when links in header are hovered over */
+header a:hover {
+  color: #FDC149;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: #296EB4;
+  color: #fff;
+}
+
+/* Style welcome section on homepage */
 .welcome {
-    display: block;
-    background-color: #fff;
-    color: #296EB4;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 2px rgba(41,110,180);
-    width: 80%;
-    text-align: center;
-    margin: 0 auto;
+  display: block;
+  background-color: #fff;
+  color: #296EB4;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px rgba(41, 110, 180);
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 5%;
 }
 
+#welcome-image {
+  border-radius: 25px;
+}
+
+/* Style buttons */
 button {
-    font-family: inherit;
-    display: block;
-    background-color: #fff;
-    color: #fff;
-    border-radius: 25px;
-    border: #296EB4;
-    box-shadow: 0 0 10px 2px rgba(41,110,180);
-    width: 30%;
-    margin: 0 auto;
-    cursor: pointer;
-    font-weight: bolder;
+  font-family: inherit;
+  display: block;
+  background-color: #fff;
+  color: #296EB4;
+  border-radius: 25px;
+  border: #296EB4;
+  box-shadow: 0 0 15px 5px rgba(41, 110, 180);
+  margin: 0 auto;
+  cursor: pointer;
+  font-weight: bolder;
 }
 
 button a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
+#start {
+  margin-top: 30%;
+  font-size: x-large;
+  width: 30vw;
+  height: 10vw;
+}
+
+/* Style footer */
 footer {
-    background-color: #296EB4;
-    color: white;
-    font-size: smaller;
-    height: 10vh;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
+  background-color: #296EB4;
+  color: white;
+  font-size: smaller;
+  height: 10vh;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
 }
 
+/* Style quiz container on play page */
+.quiz-container {
+  color: #296EB4;
+  display: block;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px rgba(41, 110, 180);
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 5%;
+}
+
+#progress-container {
+  text-align: center;
+}
+
+#progress-text {
+  padding-top: 5%;
+}
+
+#question {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}

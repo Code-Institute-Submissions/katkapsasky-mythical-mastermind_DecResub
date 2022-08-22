@@ -1,78 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="History quiz about greek mythology">
-    <meta name="keywords" content="quiz, history, greek, greece, mythology">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Luxurious+Roman&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Mythical Mastermind</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="History quiz about greek mythology">
+  <meta name="keywords" content="quiz, history, greek, greece, mythology">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Luxurious+Roman&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Mythical Mastermind</title>
 </head>
 
 <body>
 
-    <header class="topnav">
-        <a href="index.html" id="logo" class="active">Mythical Mastermind</a>
-        
-        <!-- Navigation links (hidden by default) -->
-        <nav id="myLinks">
-            <a href="index.html">Home</a>
-            <a href="play.html">Play</a>
-        </nav>
+  <!-- Navigation bar -->
+  <header class="topnav">
+    <a href="index.html" id="logo" class="active">Mythical Mastermind</a>
 
-        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars icon-4x"></i>
-        </a>
-    </header>
+    <!-- Navigation links (hidden by default) -->
+    <nav id="myLinks">
+      <a href="index.html">Home</a>
+      <a href="play.html">Play</a>
+    </nav>
 
-        <button id="start">Start</button>
+    <!-- "Hamburger menu" to toggle the navigation links -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars icon-4x"></i>
+    </a>
+  </header>
 
-        <div class="quiz-container" id="quiz">
-            <div id="progress-container">
-                <p id="progress-text">Question</p>
-                <div id="progress-bar">
-                <div id="progress-bar-full"></div>
-            </div>
-        </div>
-            <div class="quiz-header">
-              <h2 id="question">Question Text</h2>
-              <ul>
-                <li>
-                  <input type="radio" name="answer" id="a" class="answer">
-                  <label for="a" id="a_text">Answer</label>
-                </li>
-        
-                <li>
-                  <input type="radio" name="answer" id="b" class="answer">
-                  <label for="b" id="b_text">Answer</label>
-                </li>
-        
-                <li>
-                  <input type="radio" name="answer" id="c" class="answer">
-                  <label for="c" id="c_text">Answer</label>
-                </li>
-        
-                <li>
-                  <input type="radio" name="answer" id="d" class="answer">
-                  <label for="d" id="d_text">Answer</label>
-                </li>
-        
-              </ul>
-            </div>
-        
-            <button id="submit">Submit</button>
-        
-          </div>
+  <!-- Start quiz button -->
+  <button id="start">Start</button>
 
-          <footer>
-            <p>Developed by Kat Kapsasky for Code Institute Project 2</p>
-        </footer>
-        
-        <script src="assets/js/questions.js"></script>
-        <script src="assets/js/script.js"></script>
-    </body>
+  <!-- Quiz section -->
+  <div class="quiz-container" id="quiz">
+
+    <!-- Progress info -->
+    <div id="progress-container">
+      <p id="progress-text">Question</p>
+      <div id="progress-bar">
+        <div id="progress-bar-full"></div>
+      </div>
+    </div>
+    <div class="quiz-header">
+
+      <!-- Quiz question -->
+      <h2 id="question">Question Text</h2>
+
+      <!-- Quiz answer options -->
+      <ul>
+        <li>
+          <input type="radio" name="answer" id="a" class="answer">
+          <label for="a" id="a_text">Answer</label>
+        </li>
+
+        <li>
+          <input type="radio" name="answer" id="b" class="answer">
+          <label for="b" id="b_text">Answer</label>
+        </li>
+
+        <li>
+          <input type="radio" name="answer" id="c" class="answer">
+          <label for="c" id="c_text">Answer</label>
+        </li>
+
+        <li>
+          <input type="radio" name="answer" id="d" class="answer">
+          <label for="d" id="d_text">Answer</label>
+        </li>
+
+      </ul>
+    </div>
+
+    <!-- Submit/Next Question button -->
+    <button id="submit">Next Question</button>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Developed by Kat Kapsasky for Code Institute Project 2</p>
+  </footer>
+  
+  <!-- Font Awesome script -->
+  <script src="https://kit.fontawesome.com/df827de699.js" crossorigin="anonymous"></script>
+  <!-- Javascript links to script.js and questions.js for hamburger menu and quiz functionality -->
+  <script src="assets/js/questions.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
