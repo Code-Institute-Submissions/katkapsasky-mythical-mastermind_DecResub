@@ -127,10 +127,26 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 
 ### Code
 
+[W3 Schools: How to Create a Mobile Navigation Menu](https://www.w3schools.com/howto/howto_js_mobile_navbar.asp) for the hamburger menu
+
+[Coding with Nick: Create a Quiz App](https://codingwithnick.in/create-a-quiz-app-using-html-css-javascript/) for css box styling and the interactive quiz elements:
+ - looping through questions
+ - checking for the correct answer
+ - keeping score
+ - showing the result at the end
+
+[Brian Design: How to Make a Quiz App using HTML CSS Javascript - Vanilla Javascript Project for Beginners Tutorial](https://www.youtube.com/watch?v=f4fB9Xg2JEY) for the question progress counter
+
+[FreeCodeCamp: How to Keep your Footer Where it Belongs](https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/) to fix the footer sticking to the quiz question box
+
+[Kat Kapsasky: Yorkshire Art House](https://github.com/katkapsasky/yorkshire-art-house) for the ReadMe and Testing templates
+
 ### Content
+
+[Britannica.com: Gods, Goddesses and Greek Mythology](https://www.britannica.com/quiz/gods-goddesses-and-greek-mythology) for the quiz questions
 
 ### Media
 
-### Acknowledgements
+[Florian Wehde, Unsplash](https://unsplash.com/photos/z7YyCp7s-LU) for the welcome section image
 
 ---

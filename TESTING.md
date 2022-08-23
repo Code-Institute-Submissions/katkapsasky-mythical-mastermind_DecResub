@@ -62,7 +62,7 @@ The homepage and play page have been audited with Google Lighthouse and received
 
 ### Play page
 
-![gallerypage accessibility score](documentation/accessibility/play-lighthouse.png
+![gallerypage accessibility score](documentation/accessibility/play-lighthouse.png)
 
 ## Bugs
 
