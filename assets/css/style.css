@@ -1,11 +1,30 @@
 * {
-  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body>footer {
+    position: sticky;
+    top: 100vh;
+}
+
+footer {
+  background-color: #296EB4;
+  color: #fff;
+  height: 10vh;
+  width: 100%;
+  bottom: 0;
 }
 
 body {
   background-color: #fff;
   font-family: 'Luxurious Roman', cursive;
-  margin: 0;
 }
 
 h1 {
@@ -78,7 +97,6 @@ header a:hover {
   border-radius: 10px;
   box-shadow: 0 0 10px 2px rgba(41, 110, 180);
   width: 80%;
-  height: 80%;
   text-align: center;
   margin: 0 auto;
   padding-bottom: 5%;
@@ -108,6 +126,18 @@ button a {
   text-decoration: none;
 }
 
+button:hover {
+  background-color: #296EB4;
+  color: #fff;
+  font-weight: bolder;
+}
+
+button:checked {
+  background-color: #296EB4;
+  color: #fff;
+  font-weight: bolder;
+}
+
 #play {
   width: 20vw;
   height: 10vh;
@@ -117,28 +147,25 @@ button a {
 }
 
 #start {
-  margin-top: 30%;
+  margin: 50px auto;
   font-size: x-large;
   width: 30vw;
-  height: 10vw;
+  height: 10vh;
+}
+
+#submit {
+  width: 30vw;
+  height: 10vh;
+  font-weight: bolder;
+  font-weight: larger;
 }
 
 /* Style footer */
-footer {
-  background-color: #296EB4;
-  color: white;
-  font-size: smaller;
-  height: 10vh;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  margin: 0 auto;
-}
+
 
 /* Style quiz container on play page */
 .quiz-container {
   color: #296EB4;
-  display: block;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px 2px rgba(41, 110, 180);
@@ -174,12 +201,13 @@ ul {
 }
 
 .answer-options label {
-  display: inline-block;
+  display: block;
   background-color: #fff;
   padding: 10px 20px;
   font-size: 16px;
   border: 2px solid #296EB4;
   border-radius: 4px;
+  margin: 10px;
 }
 
 .answer-options label:hover {
@@ -193,3 +221,4 @@ ul {
   color: #fff;
   font-weight: bolder;
 }
+
