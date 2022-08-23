@@ -122,6 +122,9 @@ button {
   cursor: pointer;
   font-weight: bolder;
   text-align: center;
+  width: 20vw;
+  height: 10vh;
+  font-size: larger;
 }
 
 button a {
@@ -140,14 +143,6 @@ button:checked {
   font-weight: bolder;
 }
 
-#play {
-  width: 20vw;
-  height: 10vh;
-  font-size: larger;
-  font-weight: bolder;
-
-}
-
 #start {
   margin: 50px auto;
   font-size: x-large;
@@ -157,9 +152,9 @@ button:checked {
 
 #submit {
   width: 30vw;
-  height: 10vh;
-  font-weight: bolder;
-  font-weight: larger;
+  height: 8vh;
+  margin-bottom: 5%;
+  font-size: smaller;
 }
 
 /* Style footer */
