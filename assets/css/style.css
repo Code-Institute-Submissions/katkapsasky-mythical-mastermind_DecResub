@@ -14,6 +14,15 @@ body {
   color: #296EB4;
 }
 
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;    
+}
+
 h1 {
   padding-top: 5%;
 }
@@ -90,6 +99,10 @@ header a:hover {
   padding-bottom: 5%;
 }
 
+.welcome p {
+  font-size: larger;
+}
+
 #welcome-image {
   border-radius: 25px;
   margin: 0 auto;
@@ -108,6 +121,7 @@ button {
   margin: 0 auto;
   cursor: pointer;
   font-weight: bolder;
+  text-align: center;
 }
 
 button a {
@@ -149,16 +163,6 @@ button:checked {
 }
 
 /* Style footer */
-
-#page-container {
-  position: relative;
-  min-height: 100vh;
-}
-
-#content-wrap {
-  padding-bottom: 2.5rem;    /* Footer height */
-}
-
 footer {
   background-color: #296EB4;
   color: #fff;
@@ -188,10 +192,6 @@ footer {
 
 #question {
   text-align: center;
-}
-
-ul {
-  list-style-type: none;
 }
 
 .answer-options {
