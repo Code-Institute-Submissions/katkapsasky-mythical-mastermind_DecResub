@@ -56,7 +56,6 @@ function loadQuiz() {
     `;
 }
 
-//check if user answer is correct
 function deselectAnswers() {
     answerOptions.forEach(answerOption => answerOption.checked = false);
 }
@@ -72,6 +71,7 @@ function getSelected() {
 }
 
 /*
+ *check if user answer is correct
  *moves to next question when submit button is clicked
  *if there are questions remaining
  *if all questions are submitted
@@ -91,13 +91,15 @@ submitBtn.addEventListener('click', () => {
             loadQuiz();
         } else if (score > 7) {
             quiz.innerHTML = `
-           <h2>You're a mythical mastermind! You answered ${score}/${questions.length} questions correctly</h2>
+           <h2>You're a mythical mastermind!</h2>
+           <p>You answered ${score}/${questions.length} questions correctly</p>
 
            <button onclick="location.reload()">Reload</button>
            `;
         } else {
             quiz.innerHTML = `
-           <h2>Not quite a mythical mastermind... You answered ${score}/${questions.length} questions correctly</h2>
+           <h2>Not quite a mythical mastermind...</h2> 
+           <p>You answered ${score}/${questions.length} questions correctly</p>
 
            <button onclick="location.reload()">Reload</button>
            `;

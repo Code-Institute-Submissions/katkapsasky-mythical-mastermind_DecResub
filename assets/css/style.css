@@ -1,3 +1,4 @@
+/* Global styles */
 * {
   margin: 0;
   padding: 0;
@@ -35,7 +36,7 @@ a:visited {
   text-decoration: none;
 }
 
-/* For smallers screen sizes from 600px wide and down */
+/* Header */
 /* Logo styling */
 #logo {
   font-size: 150%;
@@ -184,6 +185,12 @@ footer {
   height: 2.5rem; 
 }
 
+footer p {
+  margin-top: 10px;
+  margin-left: 5px;
+  font-size: smaller;
+}
+
 /* Style quiz container on play page */
 .quiz-container {
   color: #296EB4;
@@ -238,3 +245,109 @@ footer {
   font-weight: bolder;
 }
 
+/* Media queries */
+/* For medium screen sizes from 600px wide and up */
+@media screen and (min-width: 600px) {
+
+  /* Global styles and header */
+  h2, p {
+    font-size: xx-large;
+  }
+
+  #logo {
+    font-size: 200%;
+    font-weight: bolder;
+  }
+
+  #myLinks a {
+    font-size: 150%;
+  }
+
+  /* Welcome section */
+  .welcome h1 {
+    font-size: xx-large;
+  }
+
+  .welcome p {
+    font-size: x-large;
+    font-weight: bolder;
+  }
+
+  #play {
+    font-size: xx-large;
+  }
+
+  /* Button styling */
+  button {
+    font-size: xx-large;
+  }
+
+  #start {
+    margin: 150px auto;
+    font-size: xxx-large;
+    font-weight: bolder;
+    width: 30vw;
+    height: 10vh;
+  }
+
+  /* Quiz section */
+  #progress-text {
+    font-size: 200%;
+  }
+
+  #question {
+    font-size: 200%;
+  }
+
+  .answer-options label {
+    font-size: 200%;
+    font-weight: bolder;
+  }
+
+  #submit {
+    width: 30vw;
+    height: 8vh;
+    font-size: xx-large;
+  }
+}
+
+/* For medium screen sizes from 1200px wide and up */
+@media screen and (min-width: 1200px) {
+
+    /* Global styles and header */
+    h2, p {
+      font-size: 200%;
+    }
+  
+    #logo {
+      font-size: 300%;
+      font-weight: bolder;
+    }
+  
+    #myLinks a {
+      font-size: 200%;
+    }
+
+    /* Style the hamburger menu */
+    .topnav a.icon {
+      right: 15px;
+      top: 10px;
+    }
+  
+    /* Welcome section */
+    .welcome h1 {
+      font-size: 300%;
+    }
+  
+    .welcome p {
+      font-size: 200%;
+    }
+
+    #welcome-image {
+    border-radius: 25px;
+    margin: 0 auto;
+    width: 30%;
+    height: 30%;
+    padding-bottom: 2%;
+  }
+}
