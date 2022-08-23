@@ -1,5 +1,4 @@
-const questions = [
-    {
+const questions = [{
         question: "Who was the chief god in greek mythology?",
         a: "Apollo",
         b: "Poseidon",

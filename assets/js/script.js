@@ -11,7 +11,6 @@ function myFunction() {
 // variables for quiz functionality
 let startButton = document.getElementById('start');
 let quiz = document.getElementById('quiz');
-quiz.style.display = 'none';
 let answerOptions = document.querySelectorAll('.answer');
 let question = document.getElementById('question');
 let a_text = document.getElementById('a_text');
@@ -28,6 +27,8 @@ let submitBtn = document.getElementById('submit');
 
 let currentQuiz = 0;
 let score = 0;
+
+quiz.style.display = 'none';
 
 /*
  *load quiz when start button is clicked
