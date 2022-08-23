@@ -110,6 +110,22 @@ header a:hover {
   padding-bottom: 2%;
 }
 
+#play {
+  text-decoration: none;
+  display: block;
+  background-color: #296EB4;
+  color: #fff;
+  border-radius: 25px;
+  border: solid 5px #296EB4;
+  margin: 0 auto;
+  cursor: pointer;
+  font-weight: bolder;
+  text-align: center;
+  width: 20vw;
+  height: 5vh;
+  font-size: larger;
+}
+
 /* Style buttons */
 button {
   font-family: inherit;
