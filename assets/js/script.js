@@ -79,12 +79,17 @@ submitBtn.addEventListener('click', () => {
     if (answer) {
         if (answer === questions[currentQuiz].correct) {
             score++;
+            document.getElementById(`${answer}_text`).innerText += `✅`;
+        } else {
+            document.getElementById(`${answer}_text`).innerText += `❌`;
         }
 
         currentQuiz++;
 
         if (currentQuiz < questions.length) {
-            loadQuiz();
+            setTimeout(() => {
+                loadQuiz();
+            }, 1500);
         } else if (score > 7) {
             quiz.innerHTML = `
            <h2>You're a mythical mastermind!</h2>
