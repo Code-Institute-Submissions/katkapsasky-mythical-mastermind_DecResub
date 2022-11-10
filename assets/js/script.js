@@ -13,6 +13,7 @@ let startButton = document.getElementById('start');
 let quiz = document.getElementById('quiz');
 let answerOptions = document.querySelectorAll('.answer');
 let question = document.getElementById('question');
+let shuffledQuestions, currentQuizData;
 let a_text = document.getElementById('a_text');
 let b_text = document.getElementById('b_text');
 let c_text = document.getElementById('c_text');
@@ -35,7 +36,13 @@ quiz.style.display = 'none';
  *show quiz question and answer options
  *count and show how many questions have been answered
  */
-startButton.addEventListener('click', loadQuiz);
+startButton.addEventListener('click', shuffleQuestions);
+
+function shuffleQuestions() {
+
+    shuffledQuestions = questions.sort(() => Math.random() - .5);
+    loadQuiz();
+}
 
 function loadQuiz() {
 
@@ -43,7 +50,7 @@ function loadQuiz() {
     startButton.style.display = 'none';
     deselectAnswers();
 
-    let currentQuizData = questions[currentQuiz];
+    currentQuizData = shuffledQuestions[currentQuiz];
 
     question.innerText = currentQuizData.question;
     a_text.innerText = currentQuizData.a;
@@ -72,12 +79,8 @@ function getSelected() {
 }
 
 /*
- *check if user answer is correct
- *moves to next question when submit button is clicked
- *if there are questions remaining
- *if all questions are submitted
- *the user total score will be displayed
- *along with a message
+ *check if user answer is correct moves to next question when submit button is clicked
+ *if there are questions remaining, if all questions are submitted, the user total score will be displayed along with a message
  */
 submitBtn.addEventListener('click', () => {
     let answer = getSelected();
