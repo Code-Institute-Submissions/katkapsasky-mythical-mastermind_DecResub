@@ -1,12 +1,4 @@
-// toggles hamburger menu display when clicked
-function myFunction() {
-    var x = document.getElementById("myLinks");
-    if (x.style.display === "block") {
-        x.style.display = "none";
-    } else {
-        x.style.display = "block";
-    }
-}
+/* jshint esversion: 11 */
 
 // variables for quiz functionality
 let startButton = document.getElementById('start');

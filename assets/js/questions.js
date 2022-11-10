@@ -1,3 +1,5 @@
+/* jshint esversion: 11 */
+
 const questions = [{
         question: "Who was the chief god in greek mythology?",
         a: "Apollo",
