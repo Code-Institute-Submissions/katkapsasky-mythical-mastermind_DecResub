@@ -38,7 +38,9 @@ document.getElementById('countdown').innerHTML =
   05 + ":" + 01;
 startTimer();
 
-// function to countdown 5 mins from beginning of quiz
+/* function to countdown 5 mins from beginning of quiz
+*  logic customised from CodePen: https://codepen.io/ishanbakshi/pen/pgzNMv
+*/
 function startTimer() {
   var presentTime = document.getElementById('countdown').innerHTML;
   var timeArray = presentTime.split(/[:]+/);
@@ -68,7 +70,10 @@ function checkSecond(sec) {
   return sec;
 }
 
-// function to display quiz questions and hide start button
+/* function to display quiz questions and hide start button
+*  loadQuiz() function code taken from Coding with Nick tutorial
+*  https://codingwithnick.in/create-a-quiz-app-using-html-css-javascript/
+*/
 function loadQuiz() {
 
     quiz.style.display = 'block';
