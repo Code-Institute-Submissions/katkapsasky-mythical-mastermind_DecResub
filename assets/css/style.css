@@ -28,6 +28,10 @@ h1 {
   padding-top: 5%;
 }
 
+h1, h2 {
+  font-family: 'Gideon Roman', cursive;
+}
+
 a {
   color: #296EB4;
 }

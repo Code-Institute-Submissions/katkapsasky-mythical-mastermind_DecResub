@@ -11,37 +11,34 @@ let b_text = document.getElementById('b_text');
 let c_text = document.getElementById('c_text');
 let d_text = document.getElementById('d_text');
 
+// variables for quiz progress 
 let progressText = document.getElementById('progress-text');
 let progressBarFull = document.getElementById('progress-bar-full');
 let questionCounter = 0;
 let maxQuestions = 10;
-
 let submitBtn = document.getElementById('submit');
-
 let currentQuiz = 0;
 let score = 0;
 
+// hide quiz questions 
 quiz.style.display = 'none';
 
-/*
- *load quiz when start button is clicked
- *show quiz question and answer options
- *count and show how many questions have been answered
- */
+// shuffle questions when start button is clicked
 startButton.addEventListener('click', shuffleQuestions);
 
-
+// function to shuffle quiz questions
 function shuffleQuestions() {
 
     shuffledQuestions = questions.sort(() => Math.random() - .5);
     loadQuiz();
 }
 
+// variable to show quiz countdown
 document.getElementById('countdown').innerHTML =
   05 + ":" + 01;
 startTimer();
 
-
+// function to countdown 5 mins from beginning of quiz
 function startTimer() {
   var presentTime = document.getElementById('countdown').innerHTML;
   var timeArray = presentTime.split(/[:]+/);
@@ -64,12 +61,14 @@ function startTimer() {
   
 }
 
+// function to add zero in front of numbers < 10
 function checkSecond(sec) {
-  if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+  if (sec < 10 && sec >= 0) {sec = "0" + sec}; 
   if (sec < 0) {sec = "59"};
   return sec;
 }
 
+// function to display quiz questions and hide start button
 function loadQuiz() {
 
     quiz.style.display = 'block';
@@ -90,10 +89,12 @@ function loadQuiz() {
     `;
 }
 
+// function to ensure all options are unchecked before user picks
 function deselectAnswers() {
     answerOptions.forEach(answerOption => answerOption.checked = false);
 }
 
+// function to log user's answer choice
 function getSelected() {
     let answer;
     answerOptions.forEach(answerOption => {
@@ -104,10 +105,7 @@ function getSelected() {
     return answer;
 }
 
-/*
- *check if user answer is correct moves to next question when submit button is clicked
- *if there are questions remaining, if all questions are submitted, the user total score will be displayed along with a message
- */
+// check if answer is correct and display to user
 submitBtn.addEventListener('click', () => {
     let answer = getSelected();
     if (answer) {
@@ -117,9 +115,8 @@ submitBtn.addEventListener('click', () => {
         } else {
             document.getElementById(`${answer}_text`).innerText += `❌`;
         }
-
         currentQuiz++;
-
+        // continue loading questions until running out and then display user score
         if (currentQuiz < questions.length) {
             setTimeout(() => {
                 loadQuiz();
