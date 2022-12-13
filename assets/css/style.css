@@ -131,7 +131,7 @@ header a:hover {
   text-align: center;
   width: 20vw;
   height: 5vh;
-  font-size: larger;
+  padding-bottom: 1%;
 }
 
 /* Style buttons */
@@ -141,14 +141,11 @@ button {
   background-color: #fff;
   color: #296EB4;
   border-radius: 25px;
-  border: solid 5px #296EB4;
+  border: solid 2px #296EB4;
   margin: 0 auto;
   cursor: pointer;
   font-weight: bolder;
   text-align: center;
-  width: 20vw;
-  height: 10vh;
-  font-size: larger;
 }
 
 button a {
@@ -169,16 +166,18 @@ button:checked {
 
 #start {
   margin: 150px auto;
-  font-size: xxx-large;
   font-weight: bolder;
   width: 30vw;
   height: 10vh;
 }
 
 #submit {
-  width: 30vw;
-  height: 8vh;
+  margin-top: 5%;
   margin-bottom: 5%;
+}
+
+#submit-innertext {
+  padding: 1%;
 }
 
 /* Style footer */
@@ -231,18 +230,21 @@ footer p {
 }
 
 #progress-bar {
-  width: 18vw;
-  height: 1.5rem;
-  border-radius: 10px;
-  border: 3px solid #296EB4;
+  width: 10rem;
+  height: 2rem;
+  border: 0.3rem solid #296EB4;
   margin-top: 5%;
+  margin-left: 5%;
 }
 
 #progress-bar-full {
-  height: 1.6rem;
-  border-radius: 2px;
+  height: 2.1rem;
   background-color: #296EB4;
   width: 0%;
+}
+
+#countdown {
+  margin-top: 10%;
 }
 
 #question {
@@ -402,8 +404,12 @@ input::placeholder {
   }
 
   /* Button styling */
-  button {
+  #start {
     font-size: xx-large;
+  }
+
+  #submit-innertext {
+    font-size: smaller;
   }
 
   /* Footer */
@@ -412,6 +418,19 @@ input::placeholder {
   }
 
   /* Quiz section */
+  /* Question counter and timer */
+  .hud-prefix {
+    font-size: 32px;
+  }
+  .hud-main-text {
+  text-align: center;
+  font-size: 24px;
+  }
+
+  #countdown {
+    margin-top: 5%;
+  }
+  
   #progress-text {
     font-size: 200%;
   }
@@ -470,5 +489,10 @@ input::placeholder {
     width: 30%;
     height: 30%;
     padding-bottom: 2%;
+  }
+
+  .container {
+    width: 50%;
+    margin: 5% auto;
   }
 }
