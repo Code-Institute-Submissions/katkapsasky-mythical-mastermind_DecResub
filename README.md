@@ -2,7 +2,7 @@
 
 Mythical Mastermind is a history knowledge quiz which tests the user on greek mythology facts. 
 
-Users of the website will be able to play the quiz to test their knowledge of greek mythology, receive feedback on how many questions they got right and retry the quiz, for practice and to try get a higher score.
+Users of the website will be able to play the quiz to test their knowledge of greek mythology, receive feedback on how many questions they got right and retry the quiz, for practice and to try get a higher score. Users can also save their username and score after playing and view high scores on the High Scores page.
 
 ![Screenshot of webpage on common screen sizes using am I responsive](documentation/responsiveness/amiresponsive.png)
 
