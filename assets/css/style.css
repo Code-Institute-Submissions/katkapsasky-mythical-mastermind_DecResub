@@ -34,6 +34,7 @@ h1, h2 {
 
 a {
   color: #296EB4;
+  font-family: 'Gideon Roman', cursive;
 }
 
 a:visited {
@@ -133,7 +134,7 @@ header a:hover {
 
 /* Style buttons */
 button {
-  font-family: inherit;
+  font-family: 'Gideon Roman', cursive;
   display: block;
   background-color: #fff;
   color: #296EB4;
@@ -208,8 +209,16 @@ footer p {
   margin: 20px;
 }
 
+#countdown {
+  float: right;
+  margin-right: 7%;
+  font-family: 'Gideon Roman', cursive;
+  font-size: 24px;
+}
+
 #progress-container {
   text-align: center;
+  clear: both;
 }
 
 #progress-text {
@@ -218,6 +227,7 @@ footer p {
 
 #question {
   text-align: center;
+  clear: both;
 }
 
 .answer-options {
