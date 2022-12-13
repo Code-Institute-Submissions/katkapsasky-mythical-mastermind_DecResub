@@ -129,8 +129,8 @@ submitBtn.addEventListener('click', () => {
         } else if (score > 7) {
             localStorage.setItem("mostRecentScore", score);
             quiz.innerHTML = `
-           <h2 id="mastermind">You're a mythical mastermind!</h2>
-           <p>You answered ${score}/${questions.length} questions correctly</p>
+           <h2 class="mastermind">You're a mythical mastermind!</h2>
+           <p class="mastermind">You answered ${score}/${questions.length} questions correctly</p>
 
            <button onclick="location.reload()">Reload</button>
            <button> <a href="end.html">Save Score</a></button>
@@ -138,8 +138,8 @@ submitBtn.addEventListener('click', () => {
         } else {
             localStorage.setItem("mostRecentScore", score);
             quiz.innerHTML = `
-           <h2>Not quite a mythical mastermind...</h2> 
-           <p>You answered ${score}/${questions.length} questions correctly</p>
+           <h2 class="mastermind">Not quite a mythical mastermind...</h2> 
+           <p class="mastermind">You answered ${score}/${questions.length} questions correctly</p>
 
            <button onclick="location.reload()">Reload</button>
            <button> <a href="end.html">Save Score</a></button>

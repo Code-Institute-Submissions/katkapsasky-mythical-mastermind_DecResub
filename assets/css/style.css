@@ -290,6 +290,12 @@ footer p {
   font-weight: bolder;
 }
 
+/* result text */
+.mastermind {
+  margin: 0 auto;
+  padding: 5%;
+}
+
 /* highscore page */
 #highscore-container {
   color: #296EB4;
@@ -430,7 +436,7 @@ input::placeholder {
   #countdown {
     margin-top: 5%;
   }
-  
+
   #progress-text {
     font-size: 200%;
   }
