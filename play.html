@@ -41,15 +41,24 @@
       <div class="quiz-container" id="quiz">
 
         <!-- Progress info -->
-        <div id="progress-container">
-          <p id="progress-text">Question</p>
-          <div id="progress-bar">
-            <div id="progress-bar-full"></div>
+        <div id="hud">
+          <div id="hud-item">
+            <p class="hud-prefix" id="progress-text">
+              Question
+            </p>
+            <div id="progress-bar">
+              <div id="progress-bar-full"></div>
+            </div>
+          </div>
+          <div id="hud-item">
+            <p class="hud-prefix">
+              Time Remaining
+            </p>
+            <h1 class="hud-main-text" id="countdown"></h1>
           </div>
         </div>
-        <div class="quiz-header">
 
-          <span id="countdown"></span>
+        <div class="quiz-header">
 
           <br>
           <!-- Quiz question -->

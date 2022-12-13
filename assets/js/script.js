@@ -89,7 +89,7 @@ function loadQuiz() {
     d_text.innerText = currentQuizData.d;
 
     questionCounter++;
-    progressText.innerText = `Question ${questionCounter} of ${maxQuestions}`;
+    progressText.innerText = `Question ${questionCounter}/${maxQuestions}`;
     progressBarFull.style.width = `${(questionCounter/maxQuestions) * 100}%
     `;
 }

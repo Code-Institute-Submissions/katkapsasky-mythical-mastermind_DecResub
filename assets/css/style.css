@@ -24,10 +24,6 @@ body {
   padding-bottom: 2.5rem;    
 }
 
-h1 {
-  padding-top: 5%;
-}
-
 h1, h2 {
   font-family: 'Gideon Roman', cursive;
 }
@@ -103,6 +99,10 @@ header a:hover {
   text-align: center;
   margin: 0 auto;
   padding-bottom: 5%;
+}
+
+#welcome-heading {
+  padding-top: 5%;
 }
 
 .welcome p {
@@ -206,28 +206,49 @@ footer p {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px 2px rgba(41, 110, 180);
-  margin: 20px;
+  margin: 5%;
+  padding: 5%;
 }
 
-#countdown {
-  float: right;
-  margin-right: 7%;
-  font-family: 'Gideon Roman', cursive;
-  font-size: 24px;
+#hud {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
-#progress-container {
+.hud-prefix {
   text-align: center;
-  clear: both;
 }
 
-#progress-text {
-  padding-top: 5%;
+.hud-main-text {
+  text-align: center;
+  font-size: 16px;
+}
+
+#progress-bar {
+  width: 18vw;
+  height: 1.5rem;
+  border-radius: 10px;
+  border: 3px solid #296EB4;
+  margin-top: 5%;
+}
+
+#progress-bar-full {
+  height: 1.6rem;
+  border-radius: 2px;
+  background-color: #296EB4;
+  width: 0%;
 }
 
 #question {
   text-align: center;
-  clear: both;
+  color: #fff;
+  background-color: #296EB4;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px rgba(41, 110, 180);
+  margin: 1%;
+  padding: 5%;
 }
 
 .answer-options {
