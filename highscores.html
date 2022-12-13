@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="History quiz about greek mythology">
+    <meta name="keywords" content="quiz, history, greek, greece, mythology">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Luxurious+Roman&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Mythical Mastermind</title>
+</head>
+
+<body>
+    <div id="page-container">
+        <div id="content-wrap">
+            <!-- Navigation bar -->
+            <header class="topnav">
+                <a href="index.html" id="logo" class="active">Mythical Mastermind</a>
+                <!-- Navigation links (hidden by default) -->
+                <nav id="myLinks">
+                    <a href="index.html">Home</a>
+                    <a href="play.html">Play</a>
+                </nav>
+                <!-- "Hamburger menu" to toggle the navigation links -->
+                <a href="javascript:void(0);" class="hamburger-icon" onclick="myFunction()" aria-label="dropdown-navigation-menu">
+                    <i class="fa fa-bars icon-4x"></i>
+                </a>
+            </header>
+            <br>
+            <div class="container">
+                <div id="end">
+                  <h1 id="finalScore"></h1>
+                  <form>
+                    <input type="text" name="username" id="username" placeholder="username"/>
+                    <button type="submit" id="save-score-button" onclick="saveHighScore(event)" disabled>
+                      Save
+                    </button>
+                  </form>
+                  <div id="menu-links-container">
+                  <a class="menu-links" href="/play.html">Play Again</a>
+                  <a class="menu-links" href="/index.html">Go Home</a>
+                 </div>
+                </div>
+              </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>Developed by Kat Kapsasky</p>
+        </footer>
+
+        <!-- Font Awesome script -->
+        <script src="https://kit.fontawesome.com/df827de699.js" crossorigin="anonymous"></script>
+        <!-- Javascript link for hamburger menu -->
+        <script src="assets/js/navbar.js"></script>
+        <script src="assets/js/highscores.js"></script>
+    </div>
+</body>

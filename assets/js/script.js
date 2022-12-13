@@ -127,19 +127,24 @@ submitBtn.addEventListener('click', () => {
                 loadQuiz();
             }, 1500);
         } else if (score > 7) {
+            localStorage.setItem("mostRecentScore", score);
             quiz.innerHTML = `
-           <h2>You're a mythical mastermind!</h2>
+           <h2 id="mastermind">You're a mythical mastermind!</h2>
            <p>You answered ${score}/${questions.length} questions correctly</p>
 
            <button onclick="location.reload()">Reload</button>
+           <button> <a href="highscores.html">High Scores</a></button>
            `;
         } else {
+            localStorage.setItem("mostRecentScore", score);
             quiz.innerHTML = `
            <h2>Not quite a mythical mastermind...</h2> 
            <p>You answered ${score}/${questions.length} questions correctly</p>
 
            <button onclick="location.reload()">Reload</button>
+           <button> <a href="highscores.html">High Scores</a></button>
            `;
         }
     }
 });
+

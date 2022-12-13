@@ -201,7 +201,7 @@ footer p {
 }
 
 /* Style quiz container on play page */
-.quiz-container {
+.container {
   color: #296EB4;
   background-color: #fff;
   border-radius: 10px;
@@ -282,6 +282,54 @@ footer p {
   color: #fff;
   font-weight: bolder;
 }
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  background-color: #fff;
+  padding: 10px 20px;
+  border: 2px solid #296EB4;
+  border-radius: 4px;
+  margin: 10px;
+}
+
+input::placeholder {
+  color: #aaa;
+  font-family: 'Luxurious Roman', cursive;
+}
+
+#save-score-button {
+  background-color: #fff;
+  padding: 10px 20px;
+  border: 2px solid #296EB4;
+  border-radius: 4px;
+  margin: 10px;
+}
+
+#save-score-button:hover {
+  background-color: #296EB4;
+  color: #fff;
+}
+
+#menu-links-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-links {
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.menu-links:hover {
+  color: #FDC149;
+}
+
 
 /* Media queries */
 /* For medium screen sizes from 750px wide and up */
