@@ -10,7 +10,7 @@ Users of the website will be able to play the quiz to test their knowledge of gr
 
 ## UX
 
-The website is made up of two pages, the initial landing page and the play page where users can play the quiz. Both pages have a consistent header, logo and footer, as well as the same font and color scheme. 
+The website is made up of four pages. The initial landing (home) page, the play page where users can play the quiz, the end page where users can see their score and are given the option to replay, and the high scores page which features the names and scores of the top 5 highest scoring players. All pages have a consistent header, logo and footer, as well as the same font and color scheme. 
 
 ### User Stories
 
@@ -19,6 +19,8 @@ As a user,
 - I would like to see how many questions there are in the quiz and my progress
 - I would like to receive a score at the end showing how many answers were correct
 - I would like to play the quiz multiple times for practice
+- I would like to input my username 
+- I would like to view a high scores list 
 
 ### Color Scheme
 
@@ -36,51 +38,79 @@ The hamburger icon for the dropdown menu was taken from [Font Awesome.](https://
 
 | Page | Responsiveness | Wireframe |
 | --- | --- | --- |
-| Home Page | ![screensize](documentation/responsiveness/desktop-homepage.png) | ![desktop](documentation/wireframes/desktop-homepage-wireframe.png) |
-| Home Page | ![screensize](documentation/responsiveness/tablet-homepage.png) | ![tablet](documentation/wireframes/tablet-homepage-wireframe.png) |
-| Home Page | ![screensize](documentation/responsiveness/mobile-homepage.png) | ![mobile](documentation/wireframes/mobile-homepage-wireframe.png) |
-| Play Page | ![screensize](documentation/responsiveness/desktop-quiz-page.png) | ![desktop](documentation/wireframes/desktop-playpage-wireframe.png) |
-| Play Page | ![screensize](documentation/responsiveness/tablet-quiz-page.png) | ![tablet](documentation/wireframes/tablet-playpage-wireframe.png) |
-| Play Page | ![screensize](documentation/responsiveness/mobile-quiz-page.png) | ![mobile](documentation/wireframes/mobile-playpage-wireframe.png) |
-| Results Page | ![screensize](documentation/responsiveness/desktop-result-page.png) | 
-| Results Page | ![screensize](documentation/responsiveness/tablet-result-page.png) | 
-| Results Page | ![screensize](documentation/responsiveness/mobile-result-page.png) | 
+| Home Page | ![screenshot](documentation/responsiveness/desktop-homepage.png) | ![desktop](documentation/wireframes/desktop-homepage-wireframe.png) |
+| Home Page | ![screenshot](documentation/responsiveness/tablet-homepage.png) | ![tablet](documentation/wireframes/tablet-homepage-wireframe.png) |
+| Home Page | ![screenshot](documentation/responsiveness/mobile-homepage.png) | ![mobile](documentation/wireframes/mobile-homepage-wireframe.png) |
+| Play Page | ![screenshot](documentation/responsiveness/desktop-quiz-page.png) | ![desktop](documentation/wireframes/desktop-playpage-wireframe.png) |
+| Play Page | ![screenshot](documentation/responsiveness/tablet-quiz-page.png) | ![tablet](documentation/wireframes/tablet-playpage-wireframe.png) |
+| Play Page | ![screenshot](documentation/responsiveness/mobile-quiz-page.png) | ![mobile](documentation/wireframes/mobile-playpage-wireframe.png) |
+| Results Page | ![screenshot](documentation/responsiveness/desktop-result-page.png) | 
+| Results Page | ![screenshot](documentation/responsiveness/tablet-result-page.png) | 
+| Results Page | ![screenshot](documentation/responsiveness/mobile-result-page.png) | 
 
 ---
 
 ## Features
 
-Mythical Mastermind consists of two main pages, the homepage with a welcome section and the play page where users can interact with the quiz.
+Mythical Mastermind consists of three main pages, the homepage with a welcome section, the play page where users can interact with the quiz and a high scores page where users can view the top 5 highest players' usernames and scores.
 
 ### Existing Features
 
 #### Header
-The header contains the navbar which is made up of the Mythical Mastermind logo on the left, and the dropdown hamburger menu on the right which when clicked displays clickable links to the homepage and play page to allow the user to easily navigate between the site pages. The logo is also a clickable link for the homepage. The header is consistent across all pages of the site.
+The header contains the navbar which is made up of the Mythical Mastermind logo on the left, and the dropdown hamburger menu on the right which when clicked displays clickable links to the homepage, play page and high scores page to allow the user to easily navigate across the site. The logo is also a clickable link for the homepage. The header is consistent across all pages of the site.
 ![header](documentation/features/header.png)
 ![header expanded](documentation/features/header-nav-bar.png)
+
 #### Footer
 The footer is fixed to the bottom of the page and consist across the site. It contains my name as developer of the project.
-![header expanded](documentation/features/footer.png)
+![footer](documentation/features/footer.png)
+
 #### Welcome Section
 The welcome section explains the site's purpose and includes an image of the Acropolis in Athens and a link to play the quiz.
-![header expanded](documentation/features/welcome-section.png)
+![welcome section](documentation/features/welcome-section.png)
+
 #### Start Button
 The start button initiates the quiz for the user.
-![header expanded](documentation/features/start-btn.png)
+![start button](documentation/features/start-btn.png)
+
 #### Quiz 
-The quiz is made up of a 10 questions, shown one after the other once a user has selected an answer and clicked the next question button. Each question offers the user four answer options to choose from before moving on to the next question. The user is required to choose an answer before moving on, and once an answer is selected that option will turn blue with white font as a signal to the user that their answer has been checked.
-![header expanded](documentation/features/quiz-section.png)
+The quiz is made up of 10 questions, shown one after the other in a randomised order, once a user has selected an answer and clicked the next question button. Each question offers the user four answer options to choose from before moving on to the next question. The user is required to choose an answer before moving on, and once an answer is selected that option will turn blue with white font as a signal to the user that their answer has been checked.
+![quiz](documentation/features/quiz-section.png)
+
+There is a progress bar which shows the user which question they are on out of the total ten. The progress bar's width fills up in accordance with the percentage of the quiz completion.
+![progress bar](documentation/features/progress-bar.png)
+
+There is also timer which counts down 5 minutes from the start of the quiz.
+![timer](documentation/features/timer.png)
+
+If the user runs out of time before finishing the quiz they will be notified and given the option to replay.
+![out of time](documentation/features/out-of-time.png)
+
+
+The button to move onto the next question does not appear until the user has selected an answer option to ensure they can't move on to the next question without having chosen an answer.
+![quiz next question](documentation/features/quiz-section-nextq.png)
+
+Once the user clicks the next question button, a green tick or red cross will appear next to the chosen answer depending on if it is the correct or incorrect answer respectively.
+![quiz correct answer](documentation/features/quiz-correct-answer.png)
+![quiz wrong answer](documentation/features/quiz-wrong-answer.png)
+
 #### Quiz Result
-The quiz result text will depend on if the user has scored more than 7/10 points, determining if they are a mythical mastermind or not. The result will also show the number of correct answers out of the total questions in the quiz and offer the user the option to reload and try the quiz again. 
-![header expanded](documentation/features/quiz-result.png)
+The quiz result text will depend on if the user has scored more than 7/10 points, determining if they are a mythical mastermind or not. The result will also show the number of correct answers out of the total questions in the quiz and offer the user the option to reload and try the quiz again or save their score for a chance of entering the high scores. 
+![quiz result](documentation/features/quiz-result.png)
+
+#### End Page
+Users are redirected to the end page after clicking the Save Score button at the end of the quiz result. On this page they can enter a username in order to save their score in local storage. If it is in the top 5 scores it will be visible on the high scores page, accessible after inputting a username.
+![save score](documentation/features/save-score.png)
+
+#### High Scores Page
+The high scores page shows the usernames and scores of the 5 highest scoring players stored in local storage.
+![save score](documentation/features/high-scores.png)
 
 ### Future Features 
 
-- Enable users to create a username and store their score using local storage
-- A high scores page so users can track their previous scores
 - Different result text for each of the scores of the text along with relevant images
-- Show users which questions they got wrong so they can improve those specifically
-- Add more than 10 questions and randomize the questions shown
+- Show users a summary of which questions they got wrong at the end of the quiz
+- Add more than 10 questions and randomize so a different ten questions come up each time
 
 ---
 
@@ -135,7 +165,12 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
  - keeping score
  - showing the result at the end
 
-[Brian Design: How to Make a Quiz App using HTML CSS Javascript - Vanilla Javascript Project for Beginners Tutorial](https://www.youtube.com/watch?v=f4fB9Xg2JEY) for the question progress counter
+[James Q Quick: Build a Quiz App (5)](https://www.youtube.com/watch?v=BOQLbu_Crc0) for creating the heads up display for the progress bar and countdown timer
+
+[CodePen](https://codepen.io/ishanbakshi/pen/pgzNMv) for the countdown timer logic
+
+[James Q Quick: Build a Quiz App (7)](https://www.youtube.com/watch?v=o3MF_JmQxYg), [(8)](https://www.youtube.com/watch?v=DFhmNLKwwGw) and [(9)](https://www.youtube.com/watch?v=jfOv18lCMmw)for creating the end page to save scores to local storage and displaying the top 5 high scores
+
 
 [FreeCodeCamp: How to Keep your Footer Where it Belongs](https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/) to fix the footer sticking to the quiz question box
 
@@ -148,5 +183,9 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 ### Media
 
 [Florian Wehde, Unsplash](https://unsplash.com/photos/z7YyCp7s-LU) for the welcome section image
+
+### Acknowledgements
+
+My mentor, Tim Nelson, for his invaluable feedback and insight along the way.
 
 ---
