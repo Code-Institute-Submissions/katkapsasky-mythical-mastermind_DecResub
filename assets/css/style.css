@@ -15,15 +15,6 @@ body {
   color: #296EB4;
 }
 
-#page-container {
-  position: relative;
-  min-height: 100vh;
-}
-
-#content-wrap {
-  padding-bottom: 2.5rem;    
-}
-
 h1, h2 {
   font-family: 'Gideon Roman', cursive;
 }
@@ -88,7 +79,17 @@ header a:hover {
   color: #fff;
 }
 
-/* Style welcome section on homepage */
+/* Homepage styling */
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;    
+}
+
+/* Welcome section */
 .welcome {
   display: block;
   background-color: #fff;
@@ -116,6 +117,7 @@ header a:hover {
   padding-bottom: 2%;
 }
 
+/* Link to play quiz */
 #play {
   text-decoration: none;
   display: block;
@@ -200,16 +202,18 @@ footer p {
   padding: 0 0 0.5em 0;
 }
 
-/* Style quiz container on play page */
+/* Play page */
+/* Quiz container on play page */
 .container {
   color: #296EB4;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px 2px rgba(41, 110, 180);
-  margin: 5%;
+  margin: 2%;
   padding: 5%;
 }
 
+/* Question counter and timer */
 #hud {
   display: flex;
   justify-content: space-between;
@@ -251,6 +255,7 @@ footer p {
   padding: 5%;
 }
 
+/* Answer option buttons */
 .answer-options {
   text-align: center;
   margin-bottom: 10px;
@@ -283,6 +288,37 @@ footer p {
   font-weight: bolder;
 }
 
+/* highscore page */
+#highscore-container {
+  color: #296EB4;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px rgba(41, 110, 180);
+  margin: 2%;
+  padding: 5%;
+}
+
+#final-score {
+  text-align: center;
+  padding: 1%;
+}
+
+#highScoresList {
+  width: 30%;
+  justify-content: center;
+  text-align: center;
+  list-style: none;
+  font-size: 24px;
+  color: #fff;
+  background-color: #296EB4;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px rgba(41, 110, 180);
+  margin: 0 auto;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+/* end page */
 form {
   width: 100%;
   display: flex;
@@ -329,6 +365,8 @@ input::placeholder {
 .menu-links:hover {
   color: #FDC149;
 }
+
+/* Highscores page */
 
 
 /* Media queries */
