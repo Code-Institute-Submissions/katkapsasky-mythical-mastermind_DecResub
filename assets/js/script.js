@@ -133,7 +133,7 @@ submitBtn.addEventListener('click', () => {
            <p>You answered ${score}/${questions.length} questions correctly</p>
 
            <button onclick="location.reload()">Reload</button>
-           <button> <a href="highscores.html">High Scores</a></button>
+           <button> <a href="end.html">Save Score</a></button>
            `;
         } else {
             localStorage.setItem("mostRecentScore", score);
@@ -142,7 +142,7 @@ submitBtn.addEventListener('click', () => {
            <p>You answered ${score}/${questions.length} questions correctly</p>
 
            <button onclick="location.reload()">Reload</button>
-           <button> <a href="highscores.html">High Scores</a></button>
+           <button> <a href="end.html">Save Score</a></button>
            `;
         }
     }
