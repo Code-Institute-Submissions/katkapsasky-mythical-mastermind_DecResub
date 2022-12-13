@@ -1,3 +1,8 @@
+/* Code to display highscores
+*  From Youtube: James Q Quick, Load and Display High Scores
+*  from local storage
+*  https://www.youtube.com/watch?v=jfOv18lCMmw
+*/
 let highScoresList = document.getElementById("highScoresList");
 let highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 
