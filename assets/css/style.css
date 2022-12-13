@@ -327,6 +327,11 @@ footer p {
 }
 
 /* end page */
+#finalScore {
+  display: flex;
+  justify-content: center;
+}
+
 form {
   width: 100%;
   display: flex;
