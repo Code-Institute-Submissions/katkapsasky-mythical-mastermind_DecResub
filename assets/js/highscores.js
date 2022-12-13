@@ -1,3 +1,5 @@
+/* jshint esversion: 11 */
+
 /* Code to display highscores
 *  From Youtube: James Q Quick, Load and Display High Scores
 *  from local storage

@@ -21,7 +21,7 @@ let currentQuiz = 0;
 let score = 0;
 
 // hide quiz questions 
-quiz.style.display = 'none';
+quiz.classList.add("hide");
 
 // shuffle questions when start button is clicked
 startButton.addEventListener('click', shuffleQuestions);
@@ -29,55 +29,64 @@ startButton.addEventListener('click', shuffleQuestions);
 // function to shuffle quiz questions
 function shuffleQuestions() {
 
-    shuffledQuestions = questions.sort(() => Math.random() - .5);
+    shuffledQuestions = questions.sort(() => Math.random() - 0.5);
     loadQuiz();
+    startTimer();
 }
 
 // variable to show quiz countdown
 document.getElementById('countdown').innerHTML =
-  05 + ":" + 01;
-startTimer();
+    05 + ":" + 01;
 
 /* function to countdown 5 mins from beginning of quiz
-*  logic customised from CodePen: https://codepen.io/ishanbakshi/pen/pgzNMv
-*/
+ *  logic customised from CodePen: https://codepen.io/ishanbakshi/pen/pgzNMv
+ */
 function startTimer() {
-  var presentTime = document.getElementById('countdown').innerHTML;
-  var timeArray = presentTime.split(/[:]+/);
-  var m = timeArray[0];
-  var s = checkSecond((timeArray[1] - 1));
-  if(s==59){m=m-1}
-  if(m + s == 0){
-    quiz.innerHTML = `
-           <h2>Oh no! You ran out of time!</h2>
-           <p>You answered ${score}/${questions.length} questions correctly</p>
+    let countdown = document.getElementById('countdown');
+    if (countdown) {
 
-           <button onclick="location.reload()">Reload</button>
-           `;
-  }
-  
-  document.getElementById('countdown').innerHTML =
-    m + ":" + s;
-  console.log(m)
-  setTimeout(startTimer, 1000);
-  
+        var presentTime = document.getElementById('countdown').innerHTML;
+        var timeArray = presentTime.split(/[:]+/);
+        var m = timeArray[0];
+        var s = checkSecond((timeArray[1] - 1));
+        if (s == 59) {
+            m = m - 1;
+        }
+        if (m + s == 0) {
+            quiz.innerHTML = `
+                 <h2>Oh no! You ran out of time!</h2>
+                 <p>You answered ${score}/${questions.length} questions correctly</p>
+      
+                 <button onclick="location.reload()" id="reload-button">Reload</button>
+                 `;
+        }
+
+        document.getElementById('countdown').innerHTML =
+            m + ":" + s;
+        setTimeout(startTimer, 1000);
+    }
+
 }
 
 // function to add zero in front of numbers < 10
 function checkSecond(sec) {
-  if (sec < 10 && sec >= 0) {sec = "0" + sec}; 
-  if (sec < 0) {sec = "59"};
-  return sec;
+    if (sec < 10 && sec >= 0) {
+        sec = "0" + sec;
+    }
+    if (sec < 0) {
+        sec = "59";
+    }
+    return sec;
 }
 
 /* function to display quiz questions and hide start button
-*  loadQuiz() function code taken from Coding with Nick tutorial
-*  https://codingwithnick.in/create-a-quiz-app-using-html-css-javascript/
-*/
+ *  loadQuiz() function code taken from Coding with Nick tutorial
+ *  https://codingwithnick.in/create-a-quiz-app-using-html-css-javascript/
+ */
 function loadQuiz() {
 
-    quiz.style.display = 'block';
-    startButton.style.display = 'none';
+    quiz.classList.remove("hide");
+    startButton.classList.add("hide");
     deselectAnswers();
 
     currentQuizData = shuffledQuestions[currentQuiz];
@@ -110,8 +119,15 @@ function getSelected() {
     return answer;
 }
 
+answerOptions.forEach(answerOption => {
+    answerOption.addEventListener("click", function () {
+        submitBtn.classList.remove("hide");
+    });
+});
+
 // check if answer is correct and display to user
 submitBtn.addEventListener('click', () => {
+    submitBtn.classList.add("hide");
     let answer = getSelected();
     if (answer) {
         if (answer === questions[currentQuiz].correct) {
@@ -132,8 +148,8 @@ submitBtn.addEventListener('click', () => {
            <h2 class="mastermind">You're a mythical mastermind!</h2>
            <p class="mastermind">You answered ${score}/${questions.length} questions correctly</p>
 
-           <button onclick="location.reload()">Reload</button>
-           <button> <a href="end.html">Save Score</a></button>
+           <button onclick="location.reload()" id="reload-button">Reload</button>
+           <a href="end.html" id="save-button">Save Score</a>
            `;
         } else {
             localStorage.setItem("mostRecentScore", score);
@@ -141,10 +157,9 @@ submitBtn.addEventListener('click', () => {
            <h2 class="mastermind">Not quite a mythical mastermind...</h2> 
            <p class="mastermind">You answered ${score}/${questions.length} questions correctly</p>
 
-           <button onclick="location.reload()">Reload</button>
-           <button> <a href="end.html">Save Score</a></button>
+           <button onclick="location.reload()" id="reload-button">Reload</button>
+           <a href="end.html" id="save-button">Save Score</a>
            `;
         }
     }
 });
-

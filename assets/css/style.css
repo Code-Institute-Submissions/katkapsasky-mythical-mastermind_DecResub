@@ -68,9 +68,14 @@ a:visited {
   top: 5px;
 }
 
+header a {
+  transition: all 0.2s ease-in-out;
+}
+
 /* Add color when links in header are hovered over */
 header a:hover {
-  color: #FDC149;
+  color: #fff;
+  background-color: #296EB4;
 }
 
 /* Style the active link (or home/logo) */
@@ -135,24 +140,31 @@ header a:hover {
 }
 
 /* Style buttons */
-button {
+button,
+#reload-button,
+#save-button {
   font-family: 'Gideon Roman', cursive;
   display: block;
   background-color: #fff;
   color: #296EB4;
   border-radius: 25px;
   border: solid 2px #296EB4;
-  margin: 0 auto;
+  margin: 1em auto;
   cursor: pointer;
   font-weight: bolder;
   text-align: center;
+  width: 50%;
+  padding: 1em 0;
+  font-size: 1em;
 }
 
-button a {
+a {
   text-decoration: none;
 }
 
-button:hover {
+button:hover,
+#reload-button:hover,
+#save-button:hover {
   background-color: #296EB4;
   color: #fff;
   font-weight: bolder;
@@ -165,15 +177,8 @@ button:checked {
 }
 
 #start {
-  margin: 150px auto;
   font-weight: bolder;
   width: 30vw;
-  height: 10vh;
-}
-
-#submit {
-  margin-top: 5%;
-  margin-bottom: 5%;
 }
 
 #submit-innertext {
@@ -373,10 +378,11 @@ input::placeholder {
 .menu-links {
   text-decoration: none;
   font-weight: bolder;
+  transition: all 0.2s ease-in-out;
 }
 
 .menu-links:hover {
-  color: #FDC149;
+  font-size: 125%;
 }
 
 /* Highscores page */
@@ -456,8 +462,7 @@ input::placeholder {
   }
 
   #submit {
-    width: 30vw;
-    height: 8vh;
+    width: 25vw;
     font-size: xx-large;
   }
 }
@@ -506,4 +511,8 @@ input::placeholder {
     width: 50%;
     margin: 5% auto;
   }
+}
+
+.hide {
+  display: none;
 }

@@ -43,7 +43,7 @@
 
         <!-- Progress info -->
         <div id="hud">
-          <div id="hud-item">
+          <div>
             <p class="hud-prefix" id="progress-text">
               Question
             </p>
@@ -51,7 +51,7 @@
               <div id="progress-bar-full"></div>
             </div>
           </div>
-          <div id="hud-item">
+          <div>
             <p class="hud-prefix">
               Time Remaining
             </p>
@@ -81,8 +81,8 @@
             <label for="d" id="d_text">Answer</label>
           </div>
           <!-- Submit/Next Question button -->
-          <button id="submit" aria-label="submit-answer-next-question">
-            <p id="submit-innertext">Next Question</p>
+          <button id="submit" class="hide" aria-label="submit-answer-next-question">
+            <span id="submit-innertext">Next Question</span>
           </button>
 
         </div>
