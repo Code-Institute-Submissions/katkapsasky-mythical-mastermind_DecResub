@@ -30,10 +30,44 @@ quiz.style.display = 'none';
  */
 startButton.addEventListener('click', shuffleQuestions);
 
+
 function shuffleQuestions() {
 
     shuffledQuestions = questions.sort(() => Math.random() - .5);
     loadQuiz();
+}
+
+document.getElementById('countdown').innerHTML =
+  05 + ":" + 01;
+startTimer();
+
+
+function startTimer() {
+  var presentTime = document.getElementById('countdown').innerHTML;
+  var timeArray = presentTime.split(/[:]+/);
+  var m = timeArray[0];
+  var s = checkSecond((timeArray[1] - 1));
+  if(s==59){m=m-1}
+  if(m + s == 0){
+    quiz.innerHTML = `
+           <h2>Oh no! You ran out of time!</h2>
+           <p>You answered ${score}/${questions.length} questions correctly</p>
+
+           <button onclick="location.reload()">Reload</button>
+           `;
+  }
+  
+  document.getElementById('countdown').innerHTML =
+    m + ":" + s;
+  console.log(m)
+  setTimeout(startTimer, 1000);
+  
+}
+
+function checkSecond(sec) {
+  if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+  if (sec < 0) {sec = "59"};
+  return sec;
 }
 
 function loadQuiz() {

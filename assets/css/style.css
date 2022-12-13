@@ -172,7 +172,6 @@ button:checked {
   width: 30vw;
   height: 8vh;
   margin-bottom: 5%;
-  font-size: smaller;
 }
 
 /* Style footer */
@@ -190,6 +189,10 @@ footer p {
   margin-top: 10px;
   margin-left: 5px;
   font-size: smaller;
+}
+
+.quiz-header {
+  padding: 0 0 0.5em 0;
 }
 
 /* Style quiz container on play page */
@@ -228,7 +231,6 @@ footer p {
   display: block;
   background-color: #fff;
   padding: 10px 20px;
-  font-size: 16px;
   border: 2px solid #296EB4;
   border-radius: 4px;
   margin: 10px;
@@ -247,8 +249,8 @@ footer p {
 }
 
 /* Media queries */
-/* For medium screen sizes from 600px wide and up */
-@media screen and (min-width: 600px) {
+/* For medium screen sizes from 750px wide and up */
+@media screen and (min-width: 750px) {
 
   /* Global styles and header */
   h2, p {
