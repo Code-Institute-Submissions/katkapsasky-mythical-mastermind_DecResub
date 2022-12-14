@@ -1,11 +1,11 @@
 /* jshint esversion: 11 */
 
 /* Code to save score and username
-*  and set max 5 high scores
-*  From Youtube: James Q Quick, Save High Scores
-*  in local storage
-*  https://www.youtube.com/watch?v=DFhmNLKwwGw
-*/
+ *  and set max 5 high scores
+ *  From Youtube: James Q Quick, Save High Scores
+ *  in local storage
+ *  https://www.youtube.com/watch?v=DFhmNLKwwGw
+ */
 
 let username = document.getElementById('username');
 let saveScoreButton = document.getElementById('save-score-button');
@@ -32,5 +32,5 @@ saveHighScore = (e) => {
     highScores.splice(5);
 
     localStorage.setItem('highScores', JSON.stringify(highScores));
-    window.location.assign('/');
+    window.location.assign('highscores.html');
 };
