@@ -44,9 +44,6 @@ The hamburger icon for the dropdown menu was taken from [Font Awesome.](https://
 | Play Page | ![screenshot](documentation/responsiveness/desktop-quiz-page.png) | ![desktop](documentation/wireframes/desktop-playpage-wireframe.png) |
 | Play Page | ![screenshot](documentation/responsiveness/tablet-quiz-page.png) | ![tablet](documentation/wireframes/tablet-playpage-wireframe.png) |
 | Play Page | ![screenshot](documentation/responsiveness/mobile-quiz-page.png) | ![mobile](documentation/wireframes/mobile-playpage-wireframe.png) |
-| Results Page | ![screenshot](documentation/responsiveness/desktop-result-page.png) | 
-| Results Page | ![screenshot](documentation/responsiveness/tablet-result-page.png) | 
-| Results Page | ![screenshot](documentation/responsiveness/mobile-result-page.png) | 
 
 ---
 

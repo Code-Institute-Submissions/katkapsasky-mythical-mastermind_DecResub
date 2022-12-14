@@ -16,8 +16,8 @@ Manual testing has been carried out which includes:
 ## Browser Compatibility 
 
 The website has been tested on Google Chrome, Safari and Edge. The screenshots below show sections of the site on each browser.
-![Google Chrome](documentation/responsiveness/tablet-google-chrome.png)
-![Safari](documentation/responsiveness/mobile-safari.png)
+![Google Chrome](documentation/responsiveness/tablet-quiz-page.png)
+![Safari](documentation/responsiveness/mobile-homepage.png)
 ![Edge](documentation/responsiveness/desktop-edge.png)
 
 ## Code Validation
