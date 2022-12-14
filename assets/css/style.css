@@ -301,36 +301,6 @@ footer p {
   padding: 5%;
 }
 
-/* highscore page */
-#highscore-container {
-  color: #296EB4;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px 2px rgba(41, 110, 180);
-  margin: 2%;
-  padding: 5%;
-}
-
-#final-score {
-  text-align: center;
-  padding: 1%;
-}
-
-#highScoresList {
-  width: 30%;
-  justify-content: center;
-  text-align: center;
-  list-style: none;
-  font-size: 24px;
-  color: #fff;
-  background-color: #296EB4;
-  border-radius: 10px;
-  box-shadow: 0 0 10px 2px rgba(41, 110, 180);
-  margin: 0 auto;
-  padding-top: 5%;
-  padding-bottom: 5%;
-}
-
 /* end page */
 #finalScore {
   display: flex;
@@ -386,7 +356,34 @@ input::placeholder {
 }
 
 /* Highscores page */
+#highscore-container {
+  color: #296EB4;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px rgba(41, 110, 180);
+  margin: 2%;
+  padding: 5%;
+}
 
+#final-score {
+  text-align: center;
+  padding: 1%;
+}
+
+#highScoresList {
+  width: 50%;
+  justify-content: center;
+  text-align: center;
+  list-style: none;
+  font-size: 24px;
+  color: #fff;
+  background-color: #296EB4;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px rgba(41, 110, 180);
+  margin: 0 auto;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
 
 /* Media queries */
 /* For medium screen sizes from 750px wide and up */
@@ -464,6 +461,10 @@ input::placeholder {
   #submit {
     width: 25vw;
     font-size: xx-large;
+  }
+
+  #highScoresList {
+    width: 30%;
   }
 }
 

@@ -51,6 +51,14 @@ JS Validation:
 | Result | Tablet | ![tablet](documentation/responsiveness/tablet-result-page.png) |
 | Result | Desktop | ![desktop](documentation/responsiveness/desktop-result-page.png) |
 
+| Save Score | Mobile | ![mobile](documentation/responsiveness/mobile-result-page.png) |
+| Save Score | Tablet | ![tablet](documentation/responsiveness/tablet-result-page.png) |
+| Save Score | Desktop | ![desktop](documentation/responsiveness/desktop-result-page.png) |
+
+| High Scores | Mobile | ![mobile](documentation/responsiveness/mobile-result-page.png) |
+| High Scores | Tablet | ![tablet](documentation/responsiveness/tablet-result-page.png) |
+| High Scores | Desktop | ![desktop](documentation/responsiveness/desktop-result-page.png) |
+
 
 ## Accessibility
 
