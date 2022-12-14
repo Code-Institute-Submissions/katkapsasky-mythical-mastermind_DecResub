@@ -50,14 +50,12 @@ JS Validation:
 | Result | Mobile | ![mobile](documentation/responsiveness/mobile-result-page.png) |
 | Result | Tablet | ![tablet](documentation/responsiveness/tablet-result-page.png) |
 | Result | Desktop | ![desktop](documentation/responsiveness/desktop-result-page.png) |
-
-| Save Score | Mobile | ![mobile](documentation/responsiveness/mobile-result-page.png) |
-| Save Score | Tablet | ![tablet](documentation/responsiveness/tablet-result-page.png) |
-| Save Score | Desktop | ![desktop](documentation/responsiveness/desktop-result-page.png) |
-
-| High Scores | Mobile | ![mobile](documentation/responsiveness/mobile-result-page.png) |
-| High Scores | Tablet | ![tablet](documentation/responsiveness/tablet-result-page.png) |
-| High Scores | Desktop | ![desktop](documentation/responsiveness/desktop-result-page.png) |
+| Save Score | Mobile | ![mobile](documentation/responsiveness/mobile-save-score.png) |
+| Save Score | Tablet | ![tablet](documentation/responsiveness/tablet-save-score.png) |
+| Save Score | Desktop | ![desktop](documentation/responsiveness/desktop-save-score.png) |
+| High Scores | Mobile | ![mobile](documentation/responsiveness/mobile-highscores-page.png) |
+| High Scores | Tablet | ![tablet](documentation/responsiveness/tablet-highscores-page.png) |
+| High Scores | Desktop | ![desktop](documentation/responsiveness/desktop-highscores-page.png) |
 
 
 ## Accessibility
